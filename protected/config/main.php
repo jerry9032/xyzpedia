@@ -23,7 +23,7 @@ return array(
 		// uncomment the following to enable the Gii tool
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'123456',
+			'password'=>'*',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
@@ -117,7 +117,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=xyzpedia',
 			'emulatePrepare' => true,
 			'username' => 'xyzpedia',
-			'password' => '20081227',
+			'password' => '*',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(
@@ -151,7 +151,7 @@ return array(
 		'weibo' => array(
 			"WB_AKEY" => '560274513',
 			"WB_SKEY" => '443e2bfb50cce1589b69df6eaf016135',
-			"TOKEN" => '2.00OIsg4C0hzqub13fea0e57cm77NYD',
+			"TOKEN" => '*',
 			"WB_CALLBACK_URL" => 'http://xyzpedia.org/weibo/callback.php'
 		),
 	),
