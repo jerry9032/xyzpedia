@@ -48,6 +48,11 @@
 		}
 	});
 
+
+	function isset(str) {
+		return (str != "" && str != null);
+	}
+
 	function display_restore_prompt() {
 		if (!storage) return;
 
@@ -55,8 +60,8 @@
 		post_val = storage.getItem(post_key);
 
 		// 如果浏览器有存草稿，提示恢复
-		if ( (title_val != "" && title_val != $("#contrib-title").val()) || 
-		     (post_val  != "" && post_val  != $("#contrib-content").val()) ) {
+		if ( (isset(title_val) && title_val != $("#contrib-title").val()) || 
+		     (isset(post_val)  && post_val  != $("#contrib-content").val()) ) {
 			// contrib restore box
 			$crb.append(restore_desc);
 			$crb.show();
@@ -121,12 +126,14 @@
 	$("button#restore").live("click", function() {
 		contrib_restore();
 		$crb.html("");
+		$crb.removeClass("alert-success").addClass("alert-warning");
 		$crb.append(restore_undo_desc);
 	});
 
 	$("button#restore-undo").live("click", function() {
 		contrib_restore_undo();
 		$crb.html("");
+		$crb.removeClass("alert-warning").addClass("alert-success");
 		display_restore_prompt();
 	});
 
@@ -134,7 +141,7 @@
 	$("#contrib-content").keyup(function(){
 		if ( !auto_save_started ) {
 			auto_save_started = 1;
-			setInterval(contrib_store, 10000);
+			setInterval(contrib_store, 1000);
 			$crb.hide();
 		}
 	});
