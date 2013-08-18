@@ -61,6 +61,9 @@
 		<? } ?>
 	<? } ?>
 
+	<div class="alert alert-success" id="contrib-restore" style="display:none;">
+	</div>
+
 	<form class="form-horizontal form-nodesc" method="post" action="/contribute/<?=($edit_page? "update/".$r->id :"insert")?>" style="border:0;">
 
 		<div class="control-group">
@@ -217,7 +220,7 @@
 		</div>
 
 		<div class="controls btn-toolbar">
-			<button type="submit" class="btn btn-primary"><?=($edit_page? "提交修改": "提请审核")?></button>
+			<button type="submit" class="btn btn-primary" id="contrib-submit"><?=($edit_page? "提交修改": "提请审核")?></button>
 		</div>
 
 	</form>
@@ -231,6 +234,6 @@
 post_id = <?=($edit_page?$r->id:'0')?>;
 edit_page = <?=($edit_page?'1':'0')?>;
 </script>
-<script type="text/javascript" src="/js/contribute/edit.js?ver=201305041637"></script>
+<script type="text/javascript" src="/js/contribute/edit.js?ver=201308182252"></script>
 
 </div></div>
