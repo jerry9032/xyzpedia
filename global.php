@@ -383,4 +383,19 @@ function getIP() {
 }
 
 
+// json return error handle utils
+function json_success($msg) {
+	die(json_encode( array(
+		'error' => 0,
+		'msg' => $msg
+	)));
+}
+
+function json_error($msg) {
+	die(json_encode( array(
+		'error' => 1,
+		'msg' => $msg
+	)));
+}
+
 ?>

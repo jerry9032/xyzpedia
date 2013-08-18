@@ -376,31 +376,23 @@ class PostController extends Controller {
 
 	public function actionDeleteComment() {
 
-		if ( empty($_POST['id'] ))
-			die(json_encode( array(
-				'error' => 1,
-				'msg' => 'ID 不能为空。'
-			)));
+		if ( empty($_POST['id'] )) {
+			json_error('ID 不能为空。');
+		}
+		
 		$id = (int)$_POST['id'];
 		$comment = Comment::model()->findByPk($id);
 
-		if ( empty($comment))
-			die(json_encode( array(
-				'error' => 1,
-				'msg' => '该评论不存在。'
-			)));
+		if ( empty($comment)) {
+			json_error('该评论不存在。');
+		}
+
 		if ( $comment->user_id == user()->id || isAdmin()) {
 			Comment::model()->deleteByPk($id);
-			sql("update {{post}} set comments=comments-1 where id=".$comment->id)->query();
-			die(json_encode( array(
-				'error' => 0,
-				'msg' => '删除成功。'
-			)));
+			sql("update {{post}} set comments=comments-1 where id=".$comment->post_id)->query();
+			json_success('删除成功。');
 		} else {
-			die(json_encode( array(
-				'error' => 1,
-				'msg' => '您没有权限删除此评论。'
-			)));
+			json_errro('您没有权限删除此评论。');
 		}
 	}
 
