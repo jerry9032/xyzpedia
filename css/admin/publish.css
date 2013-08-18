@@ -1,0 +1,33 @@
+.group h3 { padding: 8px 4px; }
+#enqueue-title-list {
+	margin: 0;
+}
+#enqueue-title-list li {
+	font-size: 12px;
+	margin: 10px 0;
+}
+#enqueue-title-list li button {
+	font-size: 13px;
+	width: 100%;
+	text-align: left;
+	padding: 5px 8px;
+}
+#enqueue-title-list li .contrib-meta {
+	padding-top: 2px;
+}
+#accordion {
+	margin-bottom: 20px;
+}
+#accordion p {
+	font-size: 13px;
+}
+.remove { font-size: 13px !important; }
+.btn-small [class^="icon-"] { margin-top: 1px; }
+button .loading {vertical-align: top;}
+
+div.group p { cursor: pointer;}
+
+/* accordion  fix  */
+.ui-accordion .ui-accordion-header .title {
+	margin-left: 25px;
+}

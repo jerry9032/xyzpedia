@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Header
+                </h3>
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="home">
+                                首页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="info">
+                                投稿
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="">
+                                问答
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="">
+                                通知
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="">
+                                投稿
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="">
+                                列表
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="">
+                                帮助
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <form action="" method="POST" data-ajax="false">
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-mini="true">
+                            <label for="textinput1">
+                            </label>
+                            <input name="" id="textinput1" placeholder="标题" value="" type="text" />
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <label for="textarea1">
+                            </label>
+                            <textarea name="" id="textarea1" placeholder="正文">
+                            </textarea>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="selectmenu1">
+                        </label>
+                        <select name="" data-theme="c" data-mini="true">
+                            <option value="0">
+                                分类
+                            </option>
+                            <option value="1">
+                                交通
+                            </option>
+                            <option value="2">
+                                计算机
+                            </option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <label for="toggleswitch2">
+                            </label>
+                            <select name="toggleswitch2" id="toggleswitch2" data-theme="c" data-role="slider" data-mini="true">
+                                <option value="off">
+                                    草稿
+                                </option>
+                                <option value="on">
+                                    提交
+                                </option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <input type="submit" data-theme="b" data-icon="check" data-iconpos="right" value="Submit" />
+                </form>
+            </div>
+            <div data-theme="a" data-role="footer">
+                <h3>
+                    Footer
+                </h3>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>

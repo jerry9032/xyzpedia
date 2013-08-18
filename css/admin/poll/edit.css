@@ -1,0 +1,48 @@
+#title {
+	font-size: 16px;
+	padding: 8px;
+	margin-bottom: 20px;
+}
+.answer-text {
+	margin: 0;
+}
+select {
+	padding: 0;
+	margin: 0;
+}
+table.answer-list td:first-child { width: 233px; }
+table.answer-list td:nth-child(2) { width: 233px; }
+table.answer-list td:nth-child(3) { width: 63px; }
+table.answer-list td:nth-child(4) { width: 103px; }
+
+table td.td-btn {
+	padding: 4px;
+	text-align: center;
+	vertical-align: middle;
+}
+table td.td-input {
+	padding: 4px 6px;
+}
+table td input {
+	font-size: 12px !important;
+	padding: 2px 6px !important;
+	font-family: "微软雅黑";
+}
+table td input.input-mini {
+	width: 40px;
+}
+label.radio {
+	display: inline-block;
+	padding: 4px 10px 4px 25px;
+}
+span[rel="popover"] {
+	border-bottom: 1px dotted #CCC;
+	cursor: help;
+}
+
+#search-result-list a {
+	float: left;
+}
+#search-result-list .devider {
+	float: left;
+}

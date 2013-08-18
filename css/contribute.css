@@ -1,0 +1,219 @@
+/* contrib-list */
+.subhead ul {
+	float: left;
+}
+.subhead .form-search {
+	float: right;
+}
+
+#yw0 table th, #yw0 table td { border-left: 0; }
+#yw0 table th:first-child,
+#yw0 table td:first-child { border-left: 1px solid #DDD; }
+#yw0 table td:first-child { width: 180px; font-weight: bold; }
+#yw0 table td:nth-child(2) { width: 60px; }
+#yw0 table td:nth-child(3) { width: 90px; }
+#yw0 table td:nth-child(4) { width: 90px; }
+#yw0 table td:nth-child(5) { width: 50px; }
+#yw0 table td:nth-child(6) { width: 85px; }
+#yw0 table td:nth-child(7) { width: 40px; }
+#yw0 table td:nth-child(8) { width: 50px; }
+
+/*draft*/
+a.contrib-draft { color: #f89406; }
+a.contrib-alert { color: #e32028; }
+
+
+
+/* contrib-single */
+.contrib-info {
+	margin: 3px 0;
+	font-size: 12px;
+}
+.subtitle {
+	margin: 30px 0 15px;
+}
+span[rel="popover"] {
+	border-bottom: 1px dotted #CCC;
+	cursor: help;
+}
+.popover-content {
+	font-size: 12px;
+}
+.form-horizontal .form-actions {
+	margin-bottom: 0;
+	-moz-border-bottom-left-radius: 12px;
+	-moz-border-bottom-right-radius: 12px;
+	-webkit-border-bottom-left-radius: 12px;
+	-webkit-border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+#contrib-title {
+	font-size: 20px;
+	line-height: 20px;
+	height: 30px;
+}
+.form-horizontal .add-on {
+	font-size: 12px;
+}
+.form-horizontal .btn-toolbar {
+	margin-top: 35px;
+}
+.advance-option-group {
+	display: none;
+	margin-bottom: 10px !important;
+}
+.advance-option-group label {
+	display: inline-block;
+	/*border: 1px solid #CCC;*/
+	padding: 4px 10px 4px 25px;
+}
+
+
+
+/* contrib-single-view */
+.left-bar {
+	padding: 8px 0;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	background-color: #FAFAFA;
+}
+.left-bar .left-bar-content {
+	margin: 5px 15px;
+	font-size: 12px;
+}
+.left-bar .left-bar-content button {
+	___margin-bottom: 5px;
+}
+.span9 p {
+	margin: 0 0 10px;
+	font-size: 13px;
+	text-indent: 2em;
+	line-height: 1.75em;
+}
+.span9 blockquote.contrib-excerpt {
+	padding: 0;
+	margin: 30px;
+	border: 0;
+	border-top: 1px dashed #ccc;
+	border-bottom: 1px dashed #ccc;
+	text-indent: 2em;
+}
+.span9 blockquote p {
+	font-size: 13px;
+	padding: 15px;
+}
+.span9 .contrib-meta {
+	color: #999;
+	font-size: 12px;
+	margin: 0;
+	margin-bottom: 10px;
+}
+.action-btn-bar .btn-group {
+	display: inline-block;
+	*+display: inline; /* ie 7 */
+}
+.well p {
+	margin: 5px 0;
+}
+.subhead h4 {
+	margin-top: 0;
+}
+.comments {
+	margin-top: 30px;
+}
+.comments-list {
+	margin: 0;
+	margin-bottom: 30px;
+}
+.comments-list li {
+	list-style-type: none;
+	border-top: 1px solid #EEE;
+	padding: 10px 0;
+}
+.comments-list li#li-load-more {
+	padding: 4px 8px;
+}
+.comments-list li:hover {
+	background-color: #FAFAFA;
+}
+.comments-list .avatar {
+	width: 35px;
+	margin-top: 3px;
+}
+.info-wrap {
+	float: left;
+	margin-right: 15px;
+}
+.info-wrap .floor {
+	font-size: 12px;
+	text-align: center;
+	margin-top: 5px;
+}
+.content {
+	float: left;
+	width: 565px;
+	font-size: 13px;
+	line-height: 1.75em;
+}
+.content .comment-date {
+	color: #999;
+	font-size: 10px;
+}
+.content .comment {
+	word-wrap: break-word;
+	word-break: break-all;
+	margin-top: 8px;
+	display: block;
+}
+.content .comment img {
+	vertical-align: top;
+	margin-top: -3px;
+}
+.clear {
+	float: none;
+	clear: both;
+}
+.add-comment textarea {
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+
+
+/* admin contrib list */
+.info-wrap {
+	margin: 0 20px;
+	font-size: 13px;
+	line-height: 16px;
+}
+#comment-list li {
+	margin: 0 0 2em;
+}
+#comment-list li p {
+	margin-bottom: 5px;
+	text-indent: 0;
+}
+#comment-list .avatar {
+	width: 35px;
+	float: left;
+	margin-top: 5px;
+}
+#comment-list .comment {
+	margin-left: 50px;
+}
+#comment-list .comment-meta {
+
+}
+#comment-list .comment-date {
+	color: #999;
+	font-size: 11px;
+}
+#comment-list .comment-content {
+	font-size: 13px;
+}
+#comment-list .comment-content img {
+	vertical-align: top;
+	margin-top: -3px;
+}

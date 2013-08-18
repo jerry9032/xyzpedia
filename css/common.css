@@ -1,0 +1,274 @@
+body {
+	margin-top: 60px;
+	font-family: "微软雅黑","Helvetica","黑体","宋体","sans-serif";
+}
+ul li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.red {
+	color: red;
+}
+a.red:hover {
+	color: red;
+}
+table {
+	padding: 0;
+	margin: 0;
+	border-collapse: collapse;
+}
+img.unread {
+	width: 22px;
+	height: 22px;
+	vertical-align: top;
+}
+#navbar-notify-icon {
+	position: absolute;
+	left: 52px;
+	top: 10px;
+	width: 22px;
+	height: 22px;
+}
+/*  the logo  */
+#site-title {
+	margin-bottom: 30px;
+}
+
+/* layout */
+.navbar a.avatar {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	padding: 0 !important;
+}
+.navbar .avatar img {
+	width: 23px;
+	height: 23px;
+	margin: 8px 0 6px;
+	border: 1px solid #EEE;
+}
+
+/* side bar */
+aside ul li {
+	font-size: 13px;
+	margin: 3px 0;
+}
+
+.subhead h1 {
+	font-size: 36px;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+.footer {
+	margin-top: 45px;
+	padding: 15px 0 16px;
+	border-top: 1px solid #E5E5E5;
+}
+textarea {
+	resize: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 1px 1px 0 #CCC;
+}
+
+/* font-fix for ms-yahei */
+h5 i[class^="icon-"] {margin-top: 3px;}
+li i[class^="icon-"] {margin-top: 4px;}
+a.btn i[class^="icon-"] {margin-top: 2px;}
+
+
+/*  shadow  */
+.shadow-large {
+	-moz-box-shadow: 0 0 12px rgba(180,180,180,0.5);
+	-webkit-box-shadow: 0 0 12px rgba(180,180,180,0.5);
+	box-shadow: 0 0 12px rgba(180,180,180,0.5);
+}
+.shadow-medium {
+	-moz-box-shadow: 0 0 8px rgba(180,180,180,0.5);
+	-webkit-box-shadow: 0 0 8px rgba(180,180,180,0.5);
+	box-shadow: 0 0 8px rgba(180,180,180,0.5);
+}
+.shadow-small {
+	-moz-box-shadow: 0 0 4px rgba(180,180,180,0.5);
+	-webkit-box-shadow: 0 0 4px rgba(180,180,180,0.5);
+	box-shadow: 0 0 4px rgba(180,180,180,0.5);
+}
+
+
+/*   radius border  */
+.radius-large {
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+}
+.radius-medium {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+.radius-small {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+
+/* 组件 */
+.alert-fixed {
+	position: fixed;
+	left: 40%;
+	top: 45px;
+	box-shadow: 0 1px 5px rgba(180,180,180,0.5);
+	z-index: 9999;
+}
+.label-lowkey {
+	background-color: #DDD;
+}
+div.popover {
+	font-size: 12px;
+}
+.input-prepend .add-on {
+	font-size: 12px;
+}
+.slider {
+	width: 200px;
+	margin-top: 10px;
+	float: left;
+}
+.slider-num {
+	float: left;
+	margin: 6px 20px;
+}
+
+
+
+/* universal setting */
+i.icon-blue {
+	background-image:url("../img/glyphicons-halflings-blue.png");
+}
+.form-nodesc .controls {
+	margin: 0;
+	margin-bottom: 10px;
+	padding-left: 0 !important; /* ie */
+	font-size: 12px;
+}
+.help-info {
+	font-size: 14px;
+	line-height: 22px;
+}
+.help-info blockquote {
+	font-size: 12px;
+}
+.help-info h3 {
+	font-size: 26px;
+	line-height: 26px;
+	margin: 0 auto 30px;
+}
+.help-info h4 {
+	font-size: 16px;
+	line-height: 16px;
+	margin: 25px auto 15px;
+}
+.help-info ol li {
+	margin: 0.8em 0;
+}
+.center {
+	text-align: center;
+}
+.inline {
+	display: inline;
+}
+.inline-block {
+	display: inline-block;
+}
+.clearfix {
+	float: none;
+	clear: both;
+	display: block;
+	height: 0;
+}
+
+
+/* form */
+form.form-horizontal {
+	border: 1px solid #E5E5E5;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+form.form-horizontal legend {
+	text-indent: 2em;
+	padding-top: 20px;
+}
+form.form-horizontal .form-actions {
+	margin-bottom: 0;
+}
+
+
+
+/* share button */
+#share-button {
+	padding-top: 20px;
+}
+#share-button iframe {
+	vertical-align: middle;
+}
+#share-button .share-button {
+	display: inline-block;
+	margin-right: 3px;
+}
+
+
+/* table */
+.table thead tr, tfoot tr {
+	font-weight: bold;
+	background-color: #F3F3F3;
+	background-image: -ms-linear-gradient(top,white,#F1F1F1);
+	background-image: -moz-linear-gradient(top,white,#F1F1F1);
+	background-image: -o-linear-gradient(top,white,#F1F1F1);
+	background-image: -webkit-linear-gradient(top,white,#F1F1F1);
+}
+.table .cap-name {
+	background-color: #F3F3F3;
+}
+.table tbody td, .table thead th {
+	font-size: 12px;
+}
+/* yii widget cgridview */
+#yw0 div.summary {
+	font-size: 12px;
+	float: left;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+#yw0 a.sort-link.asc {
+	background: url(/images/sort-up.gif) no-repeat 0% center;
+	display: inline-block;
+	text-indent: 15px;
+}
+#yw0 a.sort-link.desc {
+	background: url(/images/sort-down.gif) no-repeat 0% center;
+	display: inline-block;
+	text-indent: 15px;
+}
+#yw0 .yiiPager {
+	font-size: 12px;
+}
+#yw0 .yiiPager li.hidden {
+	visibility: visible;
+}
+#yw0 .yiiPager li a {
+	padding: 4px 10px;
+}
+
+
+/* add on fix */
+.input-append input.add-on,
+.input-prepend input.add-on {
+	text-align: left;
+	background-color: white;
+	text-shadow: 0;
+}

@@ -1,0 +1,244 @@
+html, body, * { margin: 0; padding: 0; font-family: "微软雅黑", sans-serif; }
+
+.pages { height: 800px; overflow: hidden; position: relative; }
+.pages .inner_page { position: relative; width: 1100px; margin: 0 auto; }
+.pages .inner_page .block { position: absolute; }
+.divide_line { position: absolute; height: 800px; width: 3px; top: 0; left: 548px; }
+a:link, a:visited { color: #369; text-decoration: none; font-weight: bold; }
+a:hover, a:active { color: #369; text-decoration: underline; font-weight: bold; }
+
+#container {}
+
+#page1 { background: url('/images/personal_timeline/page1.jpg') no-repeat center center; }
+#page1 #page1_logo {
+	position: absolute;
+	width: 210px; height: 73px;
+	left: 72px; top: 25px;
+	cursor: pointer;
+	background: url('/images/personal_timeline/page1_logo.png') no-repeat;
+}
+#page1 #page1_cake a {
+	position: absolute;
+	width: 57px; height: 53px;
+	left: 342px; top: 200px;
+	cursor: pointer;
+	background: url('/images/personal_timeline/page1_cake.gif') no-repeat;
+}
+#page1 #page1_logo a {
+	width: 210px; height: 73px;
+	display: block;
+}
+#page1 #page1_describe {
+	position: absolute;
+	width: 440px; height: 500px;
+	left: 70px; top: 210px;
+	background: url('/images/personal_timeline/page1_describe.png') no-repeat;
+}
+#page1 #page1_album {
+	position: absolute;
+	width: 500px; height: 417px;
+	left: 500px; top: 200px;
+	background: url('/images/personal_timeline/page1_album.png') no-repeat;
+}
+
+
+
+#page2 { 
+	_background-color: #cee3c7;
+	background-color: #cee3c7;
+	background: -moz-linear-gradient(top, #cee3c7, #fafdfa);
+	background: -webkit-linear-gradient(top, #cee3c7, #fafdfa);
+	background: -ms-linear-gradient(top, #cee3c7, #fafdfa);
+	background: -o-linear-gradient(top, #cee3c7, #fafdfa);
+}
+#page2 .divide_line { background-color: #5ea344; }
+#page2 #page2_title {
+	position: absolute;
+	width: 440px; height: 200px; left: 60px;
+	background: url('/images/personal_timeline/page2_title.png') no-repeat;
+	z-index: 290;
+}
+#page2 #page2_01 {
+	width: 440px; height: 300px; left: 538px;
+	background: url('/images/personal_timeline/page2_01.png') no-repeat;
+	z-index: 210;
+}
+#page2 #page2_02 {
+	width: 440px; height: 300px; left: 181px;
+	background: url('/images/personal_timeline/page2_02_blur.png') no-repeat;
+	z-index: 220;
+}
+#page2 #page2_03 {
+	width: 440px; height: 500px; left: 130px;
+	background: url('/images/personal_timeline/page2_03.png') no-repeat;
+	z-index: 230;
+}
+#page2 #page2_04 {
+	width: 440px; height: 300px; left: 538px;
+	background: url('/images/personal_timeline/page2_04.png') no-repeat;
+	z-index: 240;
+}
+#page2 #page2_world {
+	width: 1100px; height: 800px;
+	background: url('/images/personal_timeline/page2_world.png');
+	background-position: 70px 136px;
+	background-repeat: no-repeat no-repeat;
+}
+
+
+#page3 {
+	_background-color: #d9d5f7;
+	background-color: #d9d5f7;
+	background: -moz-linear-gradient(top, #d9d5f7, #fafdfa);
+	background: -webkit-linear-gradient(top, #d9d5f7, #fafdfa);
+	background: -ms-linear-gradient(top, #d9d5f7, #fafdfa);
+	background: -o-linear-gradient(top, #d9d5f7, #fafdfa);
+}
+#page3 .divide_line { background-color: #7165c8; }
+#page3 #page3_title {
+	position: absolute;
+	width: 440px; height: 200px;
+	left: 538px; top: 50px;
+	background: url('/images/personal_timeline/page3_title.png') no-repeat;
+}
+#page3 .contrib-list { list-style-type: none; font-size: 13px; }
+#page3 .contrib-list li { margin: 6px 0; }
+#page3 .contrib-list-l { margin: 110px 25px; }
+#page3 .contrib-list-r { margin: 110px 100px; }
+#page3 #page3_01 {
+	width: 540px; height: 500px;
+	left: 69px; top: 80px;
+	background: url('/images/personal_timeline/page3_01.png') no-repeat;
+	z-index: 20;
+}
+#page3 #page3_02 {
+	width: 540px; height: 500px;
+	left: 538px; top: 280px;
+	background: url('/images/personal_timeline/page3_02.png') no-repeat;
+	z-index: 20;
+}
+#page3 #page3_03 {
+	width: 540px; height: 500px;
+	left: 105px; top: 480px;
+	background: url('/images/personal_timeline/page3_03.png') no-repeat;
+	z-index: 20;
+}
+#page3 #page3_logo {
+	width: 1100px; height: 800px;
+	background: url('/images/personal_timeline/page3_logo.png');
+	background-position: 250px 136px;
+	background-repeat: no-repeat no-repeat;
+}
+
+
+
+
+#page4 {
+	background-color: #F1E2D2;
+	_background-color: #F1E2D2;
+	background: -moz-linear-gradient(top, #f1e2d2, #fafafa);
+	background: -webkit-linear-gradient(top, #f1e2d2, #fafafa);
+	background: -ms-linear-gradient(top, #f1e2d2, #fafafa);
+	background: -o-linear-gradient(top, #f1e2d2, #fafafa);
+}
+#page4 .divide_line {
+	background-color: #e5841c;
+}
+#page4 #page4_title {
+	position: absolute;
+	width: 440px; height: 750px;
+	left: 638px; top: 500px;
+	background: url('/images/personal_timeline/page4_title.png') no-repeat;
+}
+#page4 #page4_01 {
+	width: 640px; height: 250px;
+	left: 538px; top: 500px;
+	background: url('/images/personal_timeline/page4_01.png') no-repeat;
+}
+#page4 #page4_02 {
+	width: 640px; height: 250px;
+	left: 224px; top: 100px;
+	background: url('/images/personal_timeline/page4_02.png') no-repeat;
+	z-index: 420;
+}
+#page4 #page4_03 {
+	width: 640px; height: 250px;
+	left: 58px; top: 160px;
+	background: url('/images/personal_timeline/page4_03.png') no-repeat;
+}
+#page4 #page4_04 {
+	width: 640px; height: 250px;
+	left: 128px; top: 160px;
+	background: url('/images/personal_timeline/page4_04.png') no-repeat;
+}
+#page4 #page4_book {
+	width: 1100px;
+	height: 800px;
+	background: url('/images/personal_timeline/page4_book.png') no-repeat;
+	background-position: 500px 286px;
+	background-repeat: no-repeat no-repeat;
+}
+
+
+
+#page5 {
+	background-color: #deedfa;
+	_background-color: #deedfa;
+	background: -moz-linear-gradient(top, #deedfa, #fafafa);
+	background: -webkit-linear-gradient(top, #deedfa, #fafafa);
+	background: -ms-linear-gradient(top, #deedfa, #fafafa);
+	background: -o-linear-gradient(top, #deedfa, #fafafa);
+}
+#page5 .divide_line {
+	background-color: #83acc6;
+}
+#page5 #page5_title {
+	position: absolute;
+	width: 440px; height: 750px;
+	left: 68px; top: 500px;
+	background: url('/images/personal_timeline/page5_title.png') no-repeat;
+}
+
+
+
+#page6 {
+	background: url('/images/personal_timeline/page6.jpg') no-repeat center center;
+}
+#page6 #page6_dot {
+	position: absolute;
+	left: 403px;
+	top: 0;
+	width: 300px;
+	height: 200px;
+	background: url('/images/personal_timeline/page6_dot.png') no-repeat;
+}
+#page6 #page6_title {
+	position: absolute;
+	width: 460px; height: 360px;
+	left: 0px; top: 300px;
+	background: url('/images/personal_timeline/page6_title.png') no-repeat;
+}
+#page6 #page6_01 {
+	width: 600px; height: 450px;
+	left: 538px; top: 250px;
+	background: url('/images/personal_timeline/page6_01.png') no-repeat;
+	z-index: 680;
+}
+#page6 #page6_02 {
+	width: 600px; height: 450px;
+	left: 538px; top: 250px;
+	background: url('/images/personal_timeline/page6_02.png') no-repeat;
+	z-index: 670;
+}
+#page6 #page6_03 {
+	width: 600px; height: 450px;
+	left: 648px; top: 250px;
+	background: url('/images/personal_timeline/page6_03.png') no-repeat;
+	z-index: 660;
+}
+#page6 #page6_04 {
+	width: 600px; height: 450px;
+	left: 660px; top: 250px;
+	background: url('/images/personal_timeline/page6_04.png') no-repeat;
+	z-index: 650;
+}

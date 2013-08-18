@@ -1,0 +1,94 @@
+article.detail.hentry.comments {
+	margin-top: 30px;
+}
+.comments legend {
+	margin: 0;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #CCC;
+}
+.comments-list {
+	margin: 0;
+	margin-bottom: 30px;
+}
+.comments-list li {
+	list-style-type: none;
+	border-bottom: 1px dashed #CCC;
+	padding: 15px 10px;
+}
+.comments-list li#li-load-more {
+	padding: 5px 10px;
+}
+.comments-list li:hover {
+	background-color: #FAFAFA;
+}
+/* ie7 fix */
+.comments-list li:hover .clearfix {
+	height: 0;
+}
+.comments-list .avatar {
+	width: 35px;
+	margin-top: 3px;
+}
+.info-wrap {
+	float: left;
+	margin-right: 15px;
+}
+.info-wrap .floor {
+	font-size: 12px;
+	text-align: center;
+	margin-top: 5px;
+}
+.content {
+	float: left;
+	width: 490px;
+	font-size: 13px;
+	line-height: 1.8em;
+	margin-top: -3px;
+}
+.content .comment-date {
+	color: #CCC;
+	font-size: 10px;
+}
+.content .comment {
+	word-wrap: break-word;
+	word-break: break-all;
+	margin-top: 4px;
+	display: block;
+}
+.content .comment img, .content .parent img {
+	vertical-align: top;
+	margin-top: 0px;
+}
+
+
+.parent {
+	color: #999;
+	margin-top: 8px;
+	border-top: 1px dashed #EEE;
+	padding-top: 8px;
+	font-size: 12px;
+}
+.parent .parent-name {
+	color: #08C;
+}
+.parent .parent-meta {
+	margin-bottom: 0;
+}
+.parent .parent-comment {
+	margin: 0;
+}
+
+.reply {
+	cursor: pointer;
+}
+.delete {
+	cursor: pointer;
+}
+#comment-box {
+	width: 554px;
+	height: 50px;
+}
+#loading {
+	display: none;
+	margin-left: 10px;
+}

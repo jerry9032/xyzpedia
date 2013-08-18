@@ -1,0 +1,76 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	background: transparent;
+	font-size: 100%;
+	vertical-align: baseline;
+	outline: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+body > header {
+	background-color: #F0F0F0;
+	position: relative;
+	height: 43px;
+	margin: 0;
+	padding: 5px 5px 5px 5px;
+	border-bottom: 4px solid #CCC;
+	z-index: 1;
+}
+body > header .logo {
+	width: 140px;
+	height: 34px;
+}
+ul.breadcrumb {
+	background-color: #FBFBFB;
+	background-image: -moz-linear-gradient(top, white, whiteSmoke);
+	background-image: -ms-linear-gradient(top, white, whiteSmoke);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(whiteSmoke));
+	background-image: -webkit-linear-gradient(top, white, whiteSmoke);
+	background-image: -o-linear-gradient(top, white, whiteSmoke);
+	background-image: linear-gradient(top, white, whiteSmoke);
+	font-size: 13px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	border-bottom: 1px solid #CCC;
+	margin: 0;
+}
+@media screen and (max-width: 480px) {
+	body > header {
+		height: 50px;
+	}
+	body > header .logo {
+		width: 200px;
+		height: 45px;
+		margin: 3px 5px;
+	}
+	body > header > ul {
+		margin: 4px 10px;
+	}
+	ul.breadcrumb {
+		font-size: 18px;
+		height: 28px;
+		margin: 5px 0;
+	}
+	.page-footer {
+		text-align: center;	
+		font-size: 15px;
+		margin: 20px auto;
+	}
+	.btn {
+		height: 30px;
+		font-size: 18px;
+		line-height: 28px;
+		vertical-align: middle;
+		padding: 6px auto;
+	}
+}
+.clear{
+	clear:both;
+}
+.center {
+	text-align: center;
+}

@@ -1,0 +1,46 @@
+/* layout page */
+a {
+	text-decoration: none;
+}
+#footer {
+	font-size: 14px;
+	font-weight: normal;
+	margin: 10px auto 15px;
+}
+
+
+/*  shadow  */
+.shadow-large {
+	-moz-box-shadow: 0 0 12px rgba(180,180,180,0.5);
+	-webkit-box-shadow: 0 0 12px rgba(180,180,180,0.5);
+	box-shadow: 0 0 12px rgba(180,180,180,0.5);
+}
+.shadow-medium {
+	-moz-box-shadow: 0 0 8px rgba(180,180,180,0.5);
+	-webkit-box-shadow: 0 0 8px rgba(180,180,180,0.5);
+	box-shadow: 0 0 8px rgba(180,180,180,0.5);
+}
+.shadow-small {
+	-moz-box-shadow: 0 0 4px rgba(180,180,180,0.5);
+	-webkit-box-shadow: 0 0 4px rgba(180,180,180,0.5);
+	box-shadow: 0 0 4px rgba(180,180,180,0.5);
+}
+
+
+/*   radius border  */
+.radius-large {
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+}
+.radius-medium {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+.radius-small {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+

@@ -1,0 +1,134 @@
+.admin-menu {
+
+}
+.admin-menu .well {
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+.admin-menu .well a {
+	color: #666;
+}
+.admin-menu .nav-list > .active > a, .nav-list > .active > a {
+	color: #CCC;
+}
+.admin-menu .nav-list > .active > a, .nav-list > .active > a:hover {
+	background-color: #999;
+	color: #FFF;
+}
+.nav a {
+	color: #666;
+}
+
+.nav-pills > .active > a, .nav-pills > .active > a {
+	color: #CCC;
+}
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+	background-color: #999;
+	color: #FFF;
+}
+
+
+.form-nodesc .controls span, .form-nodesc .controls div {
+	font-size: 12px;
+}
+.form-nodesc .control-group {
+	margin-bottom: 0;
+}
+#post-title {
+	font-size: 20px;
+	line-height: 20px;
+	height: 30px;
+}
+.inline {
+	display: inline;
+}
+.input-micro {
+	width: 20px;
+}
+#slug, #serial, #author {
+	font-size: 12px;
+}
+
+#upload-frame {
+	border: 0;
+	width: 530px;
+	height: 375px;
+}
+.thumbnail {
+	height: 150px;
+}
+.btn-toolbar {
+	margin-top: 20px !important;
+}
+
+
+
+/*  assign page */
+ul.user-list {
+	margin-left: 0;
+}
+ul.user-list li label {
+	font-size: 13px;
+	line-height: 24px;
+}
+
+/*  summary page */
+.inner-span {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 20px;
+	border: 1px solid #E3E3E3;
+}
+.inner-span h4 {
+	margin: 20px;
+}
+.control-group.no-input .control-label {
+	padding-top: 0;
+	margin-bottom: 0;
+}
+
+
+legend h4 { margin: 0 0 20px; }
+
+
+/* post list page */
+#yw0 table.post-list #yw0_c0 { width: 40px; }	/* pid */
+#yw0 table.post-list #yw0_c1 { width: 200px; }	/* pid */
+#yw0 table.post-list #yw0_c2 { width: 80px; }	/* pid */
+#yw0 table.post-list #yw0_c3 { width: 180px; }	/* pid */
+#yw0 table.post-list #yw0_c4 { width: 50px; }	/* pid */
+#yw0 table.post-list #yw0_c5 { width: 150px; }	/* pid */
+
+/* post edit page */
+#slug-placeholder {
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+	background-color: #FCF8E3;
+	border: 1px solid #FAA732;
+	cursor: pointer;
+}
+#slug-placeholder input {
+	margin-top: -2px;
+	height: 13px;
+	font-size: 13px;
+}
+
+
+/* input in table */
+table tr.input td {
+	font-size: 12px;
+	font-weight: normal;
+	vertical-align: middle;
+}
+table tr.input td.input {
+	padding: 4px 2px;
+	text-align: center;
+}
+table tr.input td input {
+	width: 90%;
+	margin: 0 !important;
+	font-size: 13px;
+}

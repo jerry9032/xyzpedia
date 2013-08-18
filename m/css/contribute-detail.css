@@ -1,0 +1,32 @@
+.contrib-meta {
+	font-size: 13px;
+	color: #666;
+	padding: 5px 0;
+}
+#contrib-content {
+	margin: 15px auto;
+}
+#contrib-content p {
+	font-size: 15px;
+	line-height: 20px;
+	text-indent: 2em;
+}
+/* jquery mobile word-wrap fix*/
+.ui-li-heading {
+	font-size: 13px;
+	margin: 0.5em 0 0.8em;
+}
+.ui-li-desc {
+	white-space: normal;
+}
+.ui-li-desc img {
+	vertical-align: bottom;
+}
+.ui-li-static.ui-li {
+	padding: 5px 15px;
+}
+.ui-li-meta {
+	margin-top: 5px;
+	margin-bottom: 0;
+	color: #999;
+}

@@ -1,0 +1,29 @@
+#widget-order-tab {
+	width:120px;
+	margin-left:20px;
+	height:280px;
+}
+#widget-order-tab li {
+	text-align: right;
+}
+
+.sortable {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 60%;
+}
+.sortable li {
+	height: 1.5em;
+	font-size: 13px;
+	margin: 0 5px 5px 0;
+	padding: 7px;
+	cursor: move;
+}
+.sortable li .btn {
+	margin-top: -2px;
+}
+.ui-state-highlight {
+	height: 1.5em;
+	line-height: 1.2em;
+}

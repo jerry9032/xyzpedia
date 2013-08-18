@@ -1,0 +1,20 @@
+.section-title {
+	margin: 15px 0;
+}
+.post-list li {
+	margin: 6px 0;
+}
+#author-info {
+	margin: 0;
+}
+
+#author-info #avatar {
+	float: left;
+	width: 120px;
+	height: 120px;
+	border: 5px solid white;
+}
+
+#author-info #author-meta {
+	margin-left: 160px;
+}

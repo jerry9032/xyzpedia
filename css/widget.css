@@ -1,0 +1,22 @@
+/*  side widgets  */
+aside.well {
+	-webkit-box-shadow: 0 0px 8px rgba(180,180,180,0.5);
+	-moz-box-shadow: 0 0px 8px rgba(180,180,180,0.5);
+	box-shadow: 0 0px 8px rgba(180,180,180,0.5);
+}
+.widget .widget-title {
+	color: #999;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 2.4em;
+	margin: 0;
+	text-transform: uppercase;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
+}
+.widget ul {
+	font-size: 15px;
+	margin: 0;
+}
+.widget ul li {
+	list-style: none;
+}

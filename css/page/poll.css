@@ -1,0 +1,159 @@
+* {
+	font-family: "微软雅黑","Helvetica","黑体","宋体","sans-serif";
+}
+.vote_ti dt {
+	color: #605F5F;
+	overflow: hidden;
+	zoom: 1;
+	font-size: 14px;
+}
+.vote_ti dt, .vote_ti .end_time {
+	margin-left: 82px;
+}
+.vote_ti .join_nm {
+	float: left;
+	margin: -20px 0 8px;
+	width: 68px;
+	height: 54px;
+	display: inline;
+}
+.vote_joinum {
+	text-align: center;
+	background: #F0F5F7;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	cursor: default;
+}
+.vote_joinum .all_nm {
+	height: 31px;
+	line-height: 31px;
+	font-weight: 700;
+	font-size: 16px;
+	color: #82AAC0;
+}
+.vote_joinum .txt, .vote_joinum .all_nm a {
+	color: #78B6D6;
+}
+.vote_joinum .txt {
+	height: 23px;
+	line-height: 23px;
+	background: #E7F1F6;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.vote_ti .end_time {
+	height: 22px;
+	line-height: 25px;
+	color: #B8B8B8;
+}
+.vote_ti .end_time s {
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	vertical-align: middle;
+	_vertical-align: baseline;
+	background: url(/images/poll_time.png) 0 -20px no-repeat;
+	margin-right: 3px;
+}
+
+
+.vote_ti, .vote_txtlist {
+	position: relative;
+	font-size: 12px;
+	line-height: 1.125;
+}
+.vote_txtlist dl {
+	border-bottom: 1px dotted lightGrey;
+	padding: 2px 0;
+	position: relative;
+	cursor: pointer;
+	margin:0;
+}
+.vote_txtlist .checkbox {
+	margin: 0;
+	padding-left: 0;
+	width: 22px !important; /* ie 8 fix*/
+	z-index: 9999;
+}
+.vote_txtlist dt, .vote_txtlist dd {
+	padding: 6px 0;
+	overflow: hidden;
+}
+.vote_txtlist dl:hover {
+	cursor: pointer;
+	background-color: #FBFBFB;
+}
+.vote_txtlist .op_box {
+	display: inline-block;
+	width: 24px;
+	overflow: hidden;
+	z-index: 999;
+}
+.vote_txtlist dt span {
+	vertical-align: middle;
+	font-weight: normal;
+}
+.vote_txtlist dd {
+	position: absolute;
+	left: 360px;
+	top: 2px;
+	z-index: 2;
+}
+.vote_numline, .vote_numline span {
+	vertical-align: middle;
+}
+.vote_numline .vote_progress {
+	display: inline-block;
+	width: 120px;
+}
+.vote_numline .vote_progress .progress {
+	margin: 0;
+}
+.vote_numline .li_s1,
+.vote_numline .li_s2,
+.vote_numline .li_s3,
+.vote_numline .li_s4,
+.vote_numline .li_s5 {
+	height: 15px;
+}
+.vote_numline .num_txt {
+	margin-left: 10px;
+}
+.vote_numline span {
+	display: inline-block;
+}
+.vote_numline, .vote_numline span {
+	vertical-align: top;
+}
+
+
+
+.vote_optarea {
+	padding-top: 15px;
+	position: relative;
+	vertical-align: middle;
+}
+.vote_optarea .btn{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.vote_optarea .detail {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.vote_optarea label {
+	font-size: 12px;
+	color: #B8B8B8;
+	display: inline-block;
+	cursor: pointer;
+}
+.vote_optarea .checkbox {
+	margin: 0 5px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div id="page-header" data-theme="a" data-role="header">
+                <h3>
+                    小宇宙百科
+                </h3>
+                <div id="nav-bar" data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="home">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="plus">
+                                投稿
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="info">
+                                问答
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-theme="" data-icon="alert">
+                                通知
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <h3 id="today-header">
+                    “中国的银行体系”之商业银行
+                </h3>
+                <a href="#page1">
+                    <div style=" text-align:center">
+                        <img id="today-thumbnail" style="width: 288px; height: 195px" src="http://xyzpedia.org/wp-content/uploads/2012/10/86d5bac2f75ae1210ef477db-300x205.jpg" />
+                    </div>
+                </a>
+                <h5 id="today-excerpt">
+                    猎户座，赤道带星座之一。位于双子座、麒麟座、大犬座、金牛座、天兔座、波江座与小犬座之间，其北部沉浸在银河之中。星座主体由参宿四和参宿七等4颗亮星组成一个大四边形。面积为594平方度，居第26位。纬度变化位于+85°和−75°之间可全见，最佳观测月份为1月。2010年3月，赫歇尔太空天文台在猎户座星云中发现了潜在的生命有机物的化学指纹。
+                </h5>
+                <h3 id="history-header">
+                    历史词条
+                </h3>
+                <ul id="history-item" data-role="listview" data-divider-theme="a" data-inset="true">
+                    <li data-theme="c">
+                        <a href="#page1" data-transition="slide">
+                            划拳的起源和具体方法
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page1" data-transition="slide">
+                            “寻根文学”作家——莫言
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page1" data-transition="slide">
+                            细胞核重编程技术
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="c" data-role="footer">
+                <h5 id="footer">
+                    xyzpedia.org 2008-2012
+                </h5>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>

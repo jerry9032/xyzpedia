@@ -1,0 +1,64 @@
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+.label {
+  font-size: 11.844px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #999999;
+}
+
+.label {
+  padding: 1px 4px 2px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+.label-info {
+  background-color: #3a87ad;
+}
+
+a.label:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* icon */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("/img/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+.icon-white,
+.nav > .active > a > [class^="icon-"],
+.nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"] {
+  background-image: url("/img/glyphicons-halflings-white.png");
+}
+.icon-blue {
+  background-image: url("/img/glyphicons-halflings-blue.png");
+}
+.icon-comment {
+  background-position: -240px -120px;
+}
+.icon-pencil {
+  background-position: 0 -72px;
+}

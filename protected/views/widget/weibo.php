@@ -1,0 +1,3 @@
+<aside id="weibo-follow" class="widget well" style="background-color: #fff; padding: 10px;">
+	<iframe width="100%" height="450" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=450&fansRow=2&ptype=0&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2182339254&verifier=9d3ce531&colors=d6f3f7,FFFFFF,000000,0082cb,ecfbfd&dpc=1"></iframe>
+</aside>
