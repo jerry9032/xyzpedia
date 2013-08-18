@@ -1,4 +1,4 @@
 xyzpedia
 ========
 
-xyzpedia official website
+xyzpedia 官方站点，基于 Yii 框架构建。
