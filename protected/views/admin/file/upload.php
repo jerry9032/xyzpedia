@@ -19,8 +19,8 @@
 		'config'=>array(
 			'action'=>'/site/FileAjaxUpload',
 			'allowedExtensions'=>array("txt", "mp3"),
-			'sizeLimit'=>10*1024*1024,// maximum file size in bytes
-			'minSizeLimit'=>10*1024,// minimum file size in bytes
+			'sizeLimit'=>50*1024*1024,// maximum file size in bytes
+			'minSizeLimit'=>1*1024,// minimum file size in bytes
 			'onComplete'=>"js:function(id, fileName, responseJSON){ fillForm(responseJSON); }",
 			'messages'=>array(
 				'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
