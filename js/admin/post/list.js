@@ -1,4 +1,4 @@
-$(".alter").click(function(){
+$(".alter").live("click", function(){
 	$("#post_id").val($(this).attr("rel"));
 	$('#myModal').modal({
 		backdrop: true,
@@ -6,7 +6,7 @@ $(".alter").click(function(){
 		show: true
 	});
 });
-$("#alter_submit").click(function(){
+$("#alter_submit").live("click", function(){
 	$.post("/admin/post/altersubmit", {
 		post_id: $("#post_id").val(),
 		submit_name: $("#new_submit").val(),

@@ -93,4 +93,4 @@ $this->widget('zii.widgets.grid.CGridView', array(
 <script type="text/javascript" src="/js/bootstrap.js"></script>
 <script type="text/javascript" src="/js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="/js/bootstrap-typeahead.js"></script>
-<script type="text/javascript" src="/js/admin/post/list.js"></script>
+<script type="text/javascript" src="/js/admin/post/list.js?v=201309091332"></script>
