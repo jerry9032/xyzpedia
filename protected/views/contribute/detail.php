@@ -67,9 +67,15 @@
 				</button>
 				<ul class="dropdown-menu">
 
+				<? if ( isset($r->editor) && $can_notify && ($r->status == "modify") ) { ?>
+				<li><a href="javascript:;" id="btn-prompt" subject="author" data-toggle="modal"><i class="icon-comment"></i> 短信<?=Yii::t('contribute', "Prompt author"); ?></a></li>
+				<li><a href="javascript:;" id="btn-prompt-mail" subject="author" data-toggle="modal"><i class="icon-envelope"></i> 邮件<?=Yii::t('contribute', "Prompt author"); ?></a></li>
+				<li class="divider"></li>
+				<? } ?>
+
 				<? if ( isset($r->editor) && $can_notify && ($r->status == "pending") ) { ?>
-				<li><a href="javascript:;" id="btn-prompt" data-toggle="modal"><i class="icon-comment"></i> 短信<?=Yii::t('contribute', "Prompt editor"); ?></a></li>
-				<li><a href="javascript:;" id="btn-prompt-mail" data-toggle="modal"><i class="icon-envelope"></i> 邮件<?=Yii::t('contribute', "Prompt editor"); ?></a></li>
+				<li><a href="javascript:;" id="btn-prompt" subject="editor" data-toggle="modal"><i class="icon-comment"></i> 短信<?=Yii::t('contribute', "Prompt editor"); ?></a></li>
+				<li><a href="javascript:;" id="btn-prompt-mail" subject="editor" data-toggle="modal"><i class="icon-envelope"></i> 邮件<?=Yii::t('contribute', "Prompt editor"); ?></a></li>
 				<li class="divider"></li>
 				<? } ?>
 
@@ -179,7 +185,7 @@ $("#btn-prompt").click(function(){
 	$('#prompt-editor').modal({
 		keyboard:true,
 		backdrop:true,
-		show:true
+		show:true,
 	});
 });
 $("#btn-prompt-mail").click(function(){
@@ -190,10 +196,17 @@ $("#btn-prompt-mail").click(function(){
 	});
 });
 $("#confirm-prompt").click(function(){
+	if ($("#btn-promt").attr("subject") == "editor") {
+		uid = <?=$r->editor->id?>;
+		mode = "review";
+	} else {
+		uid = <?=$r->author->id?>;
+		mode = "modify";
+	}
 	$.post("/notify/sendsms", {
-		uid: <?=$r->editor->id?>,
+		uid: uid,
 		cid: <?=$r->id?>,
-		mode: "review"
+		mode: mode
 	}, function(data){
 		alert(data);
 		$('#prompt-editor').modal("hide");
@@ -201,10 +214,17 @@ $("#confirm-prompt").click(function(){
 	return false;
 });
 $("#confirm-prompt-mail").click(function(){
+	if ($("#btn-promt-mail").attr("subject") == "editor") {
+		uid = <?=$r->editor->id?>;
+		mode = "review";
+	} else {
+		uid = <?=$r->author->id?>;
+		mode = "modify";
+	}
 	$.post("/notify/sendmail", {
-		uid: <?=$r->editor->id?>,
+		uid: uid,
 		cid: <?=$r->id?>,
-		mode: "review"
+		mode: mode
 	}, function(data){
 		alert(data);
 		//$(".modal-body").html(data);
