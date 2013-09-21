@@ -227,7 +227,7 @@ class PublishController extends Controller
 	{
 		$this->pageTitle.= "定稿安排";
 		$criteria = new CDbCriteria();
-		$criteria->condition = 'id > 25';
+		$criteria->condition = 'id > 45';
 		$criteria->order = 'id';
 		$arranges = EnqueueIssue::model()->findAll($criteria);
 		$this->render("/admin/publish/appoint", array(

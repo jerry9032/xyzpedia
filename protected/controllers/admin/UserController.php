@@ -50,6 +50,7 @@ class UserController extends Controller
 		$criteria = new CDbCriteria;
 		$criteria->addSearchCondition('login',		$key, true, 'or');
 		$criteria->addSearchCondition('nick_name',	$key, true, 'or');
+		$criteria->addSearchCondition('mobile', 	$key, true, 'or');
 		$rawData = User::model()->with('info')->findAll($criteria);
 
 		$dataProvider = new CArrayDataProvider($rawData, array(

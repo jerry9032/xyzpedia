@@ -196,7 +196,7 @@ $("#btn-prompt-mail").click(function(){
 	});
 });
 $("#confirm-prompt").click(function(){
-	if ($("#btn-promt").attr("subject") == "editor") {
+	if ($("#btn-prompt").attr("subject") == "editor") {
 		uid = <?=$r->editor->id?>;
 		mode = "review";
 	} else {

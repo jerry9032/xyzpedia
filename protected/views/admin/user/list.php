@@ -2,7 +2,7 @@
 	<?=substr($this->pageTitle, 17)?>
 	<div class="pull-right form-search">
 		<input type="text" id="key" class="input-medium search-query"
-			placeholder="关键词" title="仅支持搜索用户名和投稿署名。" />
+			placeholder="关键词" title="仅支持搜索用户名/投稿署名与手机号。" />
 		<button class="btn" id="search"
 			onclick="javascript:window.location='/admin/user/search/'+$('#key').val();">
 			<i class="icon-search"></i> 搜索
@@ -35,6 +35,11 @@
 			'name' => 'nick_name',
 			'header' => '投稿署名',
 			'value' => '$data->nick_name',
+		),
+		array(
+			'name' => 'mobile',
+			'header' => '联系电话',
+			'value' => '$data->mobile',
 		),
 	),
 	'cssFile' => false,
