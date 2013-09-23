@@ -29,11 +29,14 @@
 		});
 	});
 
-	$("#alter-enqueue").click(function(){
+	$(".alter-enqueue").click(function(){
+		arrange_id = $(this).parent().attr("rel");
 		$("#myModal").modal();
 	});
+
+	arrange_id = 0;
+
 	$("#alter-enqueue-btn").click(function(){
-		arrange_id = $("#alter-enqueue-link").attr("rel");
 		$.post("/admin/publish/alter", {
 			arrange_name: $("#new_enqueue").val(),
 			arrange_id: arrange_id

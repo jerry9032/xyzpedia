@@ -1,5 +1,7 @@
-<? $enqueue_this_week = ($arrange->status == "not yet")
-	&& ($arrange->start_date > $now) && ($arrange->start_date < $now + 604800); ?>
+<?
+$enqueue_future = ($arrange->status == "not yet");
+$enqueue_this_week = $enqueue_future && ($arrange->start_date > $now) && ($arrange->start_date < $now + 604800);
+?>
 <tr>
 	<td><?=$arrange->ID?></td>
 	<td><?=timeFormat($arrange->start_date - 2 * 86400, 'date')?></td>
@@ -10,9 +12,9 @@
 		<span id="arrange<?=$arrange->ID?>">
 			<a href='/author/<?=$arrange->user->login?>'><?=$arrange->user->nick_name?></a>
 		</span>
-		<? if ($enqueue_this_week) { ?>
-		<a href="javascript:;" id="alter-enqueue-link" rel="<?=$arrange->ID?>">
-			<i class="icon-pencil icon-blue pull-right" id="alter-enqueue"></i>
+		<? if ($enqueue_future) { ?>
+		<a href="javascript:;" class="alter-enqueue-link" rel="<?=$arrange->ID?>">
+			<i class="icon-pencil icon-blue pull-right alter-enqueue"></i>
 		</a>
 		<? } ?>
 	</td>

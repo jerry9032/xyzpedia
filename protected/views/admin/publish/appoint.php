@@ -66,4 +66,4 @@
 <script type="text/javascript" src="/js/bootstrap-typeahead.js"></script>
 <link rel="stylesheet" href="/css/jquery-ui-bootstrap.css" />
 <script type="text/javascript" src="/js/jquery-ui.js"></script>
-<script type="text/javascript" src="/js/admin/publish/appoint.js"></script>
+<script type="text/javascript" src="/js/admin/publish/appoint.js?ver=201309232118"></script>
