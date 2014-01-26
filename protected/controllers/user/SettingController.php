@@ -59,6 +59,7 @@ class SettingController extends Controller {
 				"show_home" => isset($p["show-hometown"]) ? 1: 0,
 				"show_resident" => isset($p["show-resident"]) ? 1: 0,
 				"show_tags"  => isset($p['show-tags']) ? 1: 0,
+				"show_weibo"  => isset($p['show-weibo']) ? 1: 0,
 				"contrib_num" => $p['contrib-num'],
 				"illustrate_num" => $p['illustrate-num'],
 			));

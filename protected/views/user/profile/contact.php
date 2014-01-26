@@ -24,6 +24,13 @@
 		</div>
 	</div>
 	<div class="control-group">
+		<label class="control-label" for="weibo">新浪微博</label>
+		<div class="controls">
+			<div class="input-prepend"><span class="add-on">http://weibo.com/</span><input type="text" id="weibo_url" name="weibo_url" class="span2" value="<?=$user_info->weibo_url?>"></div>　
+			<div class="input-prepend"><span class="add-on">@</span><input type="text" id="weibo_url" name="weibo" class="span2" value="<?=$user_info->weibo?>"></div>
+		</div>
+	</div>
+	<div class="control-group">
 		<label class="control-label" for="mobile">您的手机号</label>
 		<div class="controls">
 			<input type="text" id="mobile" name="mobile" value="<?=$user->mobile?>" title="只用于统计，请放心填写。">

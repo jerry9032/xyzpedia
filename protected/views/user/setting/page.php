@@ -4,7 +4,7 @@
 	<legend><h4><?=Yii::t("user", "Personal Page Display")?></h4></legend>
 	<fieldset>
 	<div class="control-group">
-		<label class="control-label" for="show-hometown">主页上是否显示</label>
+		<label class="control-label" for="show-hometown">隐私设置</label>
 		<div class="controls">
 			<label class="checkbox">
 				<input type="checkbox" id="show-hometown" name="show-hometown" value="1"<?
@@ -26,6 +26,13 @@
 						echo " checked";
 					?>>
 				我的个人标签
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" id="show-weibo" name="show-weibo" value="1"<?
+					if ($user_setting->show_weibo)
+						echo " checked";
+					?>>
+				我的微博号
 			</label>
 		</div>
 	</div>

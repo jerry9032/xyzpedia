@@ -44,6 +44,17 @@ class ProfileController extends Controller {
 		));
 	}
 
+	public function trimDomain($url) {
+		$domainPos = strpos($url, "http://");
+		if ($domainPos !== false) {
+			$url = substr($url, 7);
+		}
+		$domainPos = strpos($url, "/");
+		if ($domainPos !== false) {
+			$url = substr($url, $domainPos+1);
+		}
+		return $url;
+	}
 
 	public function actionContact() {
 		if ( !empty($_POST) ) {
@@ -55,6 +66,8 @@ class ProfileController extends Controller {
 				"email" => $p["email"],
 				"url" => $p["url"],
 				"qq" => $p["qq"],
+				"weibo" => $p["weibo"],
+				"weibo_url" => $this->trimDomain($p["weibo_url"]),
 				"upline" => $p["upline"],
 			));
 			$this->redirect('/user/profile/contact?msg=202');

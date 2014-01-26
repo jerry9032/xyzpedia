@@ -41,11 +41,11 @@ class UserSetting extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('id', 'required'),
-			array('id, contrib_num, illustrate_num, show_home, show_resident, show_tags', 'numerical', 'integerOnly'=>true),
+			array('id, contrib_num, illustrate_num, show_home, show_resident, show_tags, show_weibo', 'numerical', 'integerOnly'=>true),
 			array('lang', 'length', 'max'=>6),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, lang, contrib_num, illustrate_num, show_home, show_resident, show_tags', 'safe', 'on'=>'search'),
+			array('id, lang, contrib_num, illustrate_num, show_home, show_resident, show_tags, show_weibo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,6 +73,7 @@ class UserSetting extends CActiveRecord
 			'show_home' => 'Show Home',
 			'show_resident' => 'Show Resident',
 			'show_tags' => 'Show Tags',
+			'show_weibo' => 'Show Weibo',
 		);
 	}
 
@@ -94,6 +95,7 @@ class UserSetting extends CActiveRecord
 		$criteria->compare('show_home',$this->show_home);
 		$criteria->compare('show_resident',$this->show_resident);
 		$criteria->compare('show_tags',$this->show_tags);
+		$criteria->compare('show_weibo',$this->show_weibo);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

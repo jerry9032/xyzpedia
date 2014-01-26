@@ -53,12 +53,14 @@ class UserInfo extends CActiveRecord
 			array('qq, regdate, downline, last_login', 'numerical', 'integerOnly'=>true),
 			array('score', 'numerical'),
 			array('email, url', 'length', 'max'=>100),
+			array('weibo', 'length', 'max'=>30),
+			array('weibo_url', 'length', 'max'=>128),
 			array('hometown, resident, school', 'length', 'max'=>64),
 			array('upline, ip, career', 'length', 'max'=>16),
 			array('activation', 'length', 'max'=>18),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, email, url, qq, hometown, resident, regdate, upline, downline, descript, ip, career, school, score, activation, last_login', 'safe', 'on'=>'search'),
+			array('id, email, url, qq, weibo, hometown, resident, regdate, upline, downline, descript, ip, career, school, score, activation, last_login', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -83,7 +85,9 @@ class UserInfo extends CActiveRecord
 			'id' => 'ID',
 			'email' => 'Email',
 			'url' => 'Url',
-			'qq' => 'Qq',
+			'qq' => 'QQ',
+			'weibo' => 'Weibo',
+			'weibo_url' => 'WeiboURL',
 			'hometown' => 'Hometown',
 			'resident' => 'Resident',
 			'regdate' => 'Regdate',
@@ -114,6 +118,8 @@ class UserInfo extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('url',$this->url,true);
 		$criteria->compare('qq',$this->qq);
+		$criteria->compare('weibo',$this->weibo);
+		$criteria->compare('weibo_url',$this->weibo_url);
 		$criteria->compare('hometown',$this->hometown,true);
 		$criteria->compare('resident',$this->resident,true);
 		$criteria->compare('regdate',$this->regdate);

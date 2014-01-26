@@ -24,7 +24,11 @@
 			<p><b>个人说明：</b><?=$user_info->descript?></p>
 			<p><b>个人主页：</b><a href="<?=$user_info->url?>"><?=$user_info->url?></a></p>
 
-			<? if ($setting->show_home) { ?>
+			<? if ($setting->show_weibo) { ?>
+			<p><b>新浪微博：</b><a href="http://weibo.com/<?=$user_info->weibo_url?>" target="_blank">@<?=$user_info->weibo?></p></a>
+			<? }
+
+			if ($setting->show_home) { ?>
 			<p><b>家　　乡：</b><?=$user_info->hometown?></p>
 			<? }
 
