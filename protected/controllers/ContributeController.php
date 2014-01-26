@@ -148,7 +148,7 @@ class ContributeController extends Controller
 				"appoint" => ( empty($p["appoint"])? 0: gmtTime($p["appoint"]."-00-00") ),
 			));
 
-		$this->redirect('/contribute/id/'.$id.'/edit?msg=1');
+		$this->redirect('/contribute/id/'.$id.'?msg=1');
 	}
 
 
@@ -439,3 +439,4 @@ class ContributeController extends Controller
 		die(CJSON::encode($data));
 	}
 }
+
