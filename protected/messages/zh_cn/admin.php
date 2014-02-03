@@ -101,7 +101,9 @@ return array(
 		"category" => "分类目录",
 		"weixin" => "微信二维码",
 		"weibo" => "新浪微博",
+	"Weixinsetting" => "微信",
 	"Adjust widget order success." => "调整小工具顺序成功。",
+	"Modify setting success." => "修改设置成功。",
 
 	// polling
 	"Modify poll success." => "修改投票成功。",

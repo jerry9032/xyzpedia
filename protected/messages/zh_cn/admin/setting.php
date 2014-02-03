@@ -14,6 +14,8 @@ return array(
 		"weibo" => "新浪微博",
 	"Adjust widget order success." => "调整小工具顺序成功。",
 
+	"Modify setting success." => "修改设置成功。",
+
 	// cron
 	"every" => "每天",
 	"post" => "词条",

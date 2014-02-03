@@ -104,6 +104,27 @@ class SettingController extends Controller {
 			"dataProvider" => $dataProvider,
 		));
 	}
+
+	public function actionWeixin()
+	{
+		$this->pageTitle .= "微信管理";
+		$this->render("/admin/setting/weixin", array(
+			"action" => "Weixinsetting",
+			"party_signup_echo_on" => get_option("weixin_party_signup_echo_on"),
+			"party_signup_echo"    => get_option("weixin_party_signup_echo"),
+		));
+	}
+
+	public function actionWeixinUpdate()
+	{
+		if (empty($_POST)){
+			throwException(500, "没有Post数据");
+		}
+		set_option("weixin_party_signup_echo_on", $_POST["party_signup_echo_on"]);
+		set_option("weixin_party_signup_echo",    $_POST["party_signup_echo"]);
+		$this->redirect("/admin/setting/weixin?msg=131");
+	}
+
 }
 
 ?>

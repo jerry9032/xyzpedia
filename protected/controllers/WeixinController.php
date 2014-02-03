@@ -12,12 +12,26 @@ class WeixinController extends Controller
 	{
 		$this->layout = false;
 
-		$fromUsername = "shenjiale";
-		$toUsername = "xyzpedia";
-		$keyword = "20140125";
-		$wx = new WeixinCallbackAPI();
+		$postStr = file_get_contents("/var/www/html/xyzpedia/assets/post.data");
+		if ( empty($postStr) )
+			return;
 
-		$this->eventQuery($fromUsername, $toUsername, "V1_TODAY_AUTHOR");
+		$wx = new WeixinCallbackAPI();
+		$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+		$fromUsername = $postObj->FromUserName;
+		$toUsername = $postObj->ToUserName;
+		$msgType = $postObj->MsgType;
+		$msg = trim((string)$postObj->Content);
+
+		if ($msgType == "text") {
+			$is_party_signup_echo_on = (get_option("weixin_party_signup_echo_on") == "1");
+			$party_signup_echo = get_option("weixin_party_signup_echo");
+			if ($is_party_signup_echo_on && $this->_isSignUpMsg($msg)) {
+				echo $wx->responseMsg($fromUsername, $toUsername, $msg, time(), $party_signup_echo);
+			} else {
+				$this->textQuery($fromUsername, $toUsername, $msg);
+			}
+		}
 	}
 	public function actionEcho()
 	{
@@ -28,13 +42,21 @@ class WeixinController extends Controller
 		if ( empty($postStr) )
 			return;
 
+		$wx = new WeixinCallbackAPI();
 		$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
 		$fromUsername = $postObj->FromUserName;
 		$toUsername = $postObj->ToUserName;
 		$msgType = $postObj->MsgType;
+		$msg = trim((string)$postObj->Content);
 
 		if ($msgType == "text") {
-			$this->textQuery($fromUsername, $toUsername, trim((string)$postObj->Content));
+			$is_party_signup_echo_on = (get_option("weixin_party_signup_echo_on") == "1");
+			$party_signup_echo = get_option("weixin_party_signup_echo");
+			if ($is_party_signup_echo_on && $this->_isSignUpMsg($msg)) {
+				echo $wx->responseMsg($fromUsername, $toUsername, $msg, time(), $party_signup_echo);
+			} else {
+				$this->textQuery($fromUsername, $toUsername, $msg);
+			}
 		}
 		if ($msgType == "event") {
 			$this->eventQuery($fromUsername, $toUsername, (string)$postObj->EventKey);
@@ -80,7 +102,7 @@ class WeixinController extends Controller
 		$wx = new WeixinCallbackAPI();
 
 		if ($event == "V1_TODAY_ENTRY") {
-			$keyword = date("Ymd", time());
+			$keyword = time();
 			$response = $wx->historyPost($fromUsername, $toUsername, $keyword, time());
 			if (empty($response)) {
 				echo $wx->responseMsg($fromUsername, $toUsername, $keyword, time(), "今天($keyword)还没有词条哦~");
@@ -88,7 +110,7 @@ class WeixinController extends Controller
 				echo $response;
 			}
 		} else if ($event == "V1_TODAY_AUTHOR") {
-			$post = PostFinder::getHistoryPostByTimestamp(gmtTime());
+			$post = PostFinder::getHistoryPostByTimestamp(time());
 			$authors = $post->author;
 			$counter = 0;
 			$items = "";
@@ -97,7 +119,7 @@ class WeixinController extends Controller
 				$author_info = UserInfo::model()->findByPk($author->id);
 				$title = "【今日作者】" . $author->nick_name;
 				$excerpt = "作者简介：" . $author_info->descript;
-				$postpic = $site. "/images/avatar/" . $author->avatar;
+				$postpic = $site. "/images/avatar/" . rawurlencode($author->avatar);
 				$permalink = $site . "/author/id/" . $author->id;
 				$item = $wx->buildNewsItemTpl($title, $excerpt, $postpic, $permalink);
 				$items .= $item;
@@ -108,6 +130,17 @@ class WeixinController extends Controller
 		} else {
 			echo $wx->responseMsg($fromUsername, $toUsername, NULL, time(), $msgInfo[$event]);			
 		}
+	}
+
+	private function _isSignUpMsg($msg) {
+		$arr = preg_split("/[\s,.，+]+/", $msg);
+		$regex = "/13[0-9]{9}|15[0|1|2|3|5|6|7|8|9]\d{8}|18[0|5|6|7|8|9]\d{8}/";
+		foreach($arr as $key) {
+			if (preg_match($regex, $key)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
 
@@ -139,6 +172,7 @@ class PostFinder
 		$criteria = new CDbCriteria();
 		$criteria->addCondition("created<" . ($gmtTime+43200));
 		$criteria->addCondition("created>=" . ($gmtTime-43200));
+		$criteria->order = "t.created";
 		$post = Post::model()->find($criteria);
 		if (!empty($post)) {
 			return $post;
@@ -195,7 +229,10 @@ class WeixinCallbackAPI
 		if ($historyNum < 20081227)
 			return NULL;
 
-		$post = PostFinder::getHistoryPostByDate($keyword);
+		if ($historyNum > 1230307200)
+			$post = PostFinder::getHistoryPostByTimestamp($keyword);
+		else
+			$post = PostFinder::getHistoryPostByDate($keyword);
 		if (!empty($post)) {
 			return $this->buildPosts($fromUsername, $toUsername, array($post), $time);
 		}

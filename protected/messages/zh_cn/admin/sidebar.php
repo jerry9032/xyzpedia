@@ -29,6 +29,8 @@ return array(
 		"Setting" => "网站设置",
 		"General" => "常规设置",
 		"Widget" => "小工具",
+		"Weixin" => "微信",
+		"Cron" => "定时任务",
 	"Help" => "帮助",
 
 
