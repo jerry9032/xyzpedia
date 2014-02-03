@@ -89,16 +89,6 @@ class WeixinController extends Controller
 			//echo $wx->responseMsg($fromUsername, $toUsername, $keyword, time(), "字段为空");
 			return;
 		}
-		$msgInfo = array(
-			"V1_KEYWORD_SEARCH"   => "小宇宙百科官方号即是一个移动百科小词典，输入关键词（如摄影、台湾）系统就会自动检索以往的小百科，帮助您随时随地掌握百科小知识。",
-			"V1_HOWTO_CONTRIBUTE" => "小宇宙百科每一条词条都是由志愿者编辑整理而成，如果您也想与更多朋友分享您的所见、所识，贡献不一般的百科知识，欢迎登录：\n\n".
-									"    http://xyzpedia.org/\n\n通过小宇宙百科，您可以将自己的智识传播给更多的人，也能认识更多志同道合的朋友。",
-			"V1_ABOUT_XYZPEDIA"   => "有人说我是梦想家，但我坚信我不是，无论如何，人应该努力成为他命中注定要成为的那个人。\n\n".
-									"小宇宙百科始于2008年12月27日，是一个以新媒体为平台，以友谊为纽带，一个完全免费、共享的知识驿站。".
-									"小百科工作室每天提供一条百科知识，通过微信、微博、网站等平台对外发布。所有百科条目由志愿者投稿，工作室录用编辑以后发布。\n\n".
-									"共享知识，分享生活\n\nStay Hungry, Stay Foolish\n投稿,参与或建议，请登录http://xyzpedia.org\n\n".
-									"QQ群\n- 杭州地区：165405934\n- 北京地区：168734692\n- 南京地区：209952309\n- 上海地区：167566007\n- 其他地区：125561399"
-		);
 		$wx = new WeixinCallbackAPI();
 
 		if ($event == "V1_TODAY_ENTRY") {
@@ -128,15 +118,32 @@ class WeixinController extends Controller
 			}
 			echo $wx->buildNewsTpl($fromUsername, $toUsername, $items, $counter, time());
 		} else {
-			echo $wx->responseMsg($fromUsername, $toUsername, NULL, time(), $msgInfo[$event]);			
+			switch($event) {
+				case "V1_KEYWORD_SEARCH":
+					$msg = get_option("weixin_keyword_search_echo"); break;
+				case "V1_HOWTO_CONTRIBUTE":
+					$msg = get_option("weixin_howto_contribute_echo"); break;
+				case "V1_OFFLINE_PARTY":
+					$party_on = (get_option("weixin_party_echo_on") == "1");
+					if ($party_on) {
+						$msg = get_option("weixin_party_echo");
+					} else {
+						$msg = "近期没有线下活动哟，请耐心等待~[愉快]";
+					}
+					break;
+				case "V1_ABOUT_XYZPEDIA":
+					$msg = get_option("weixin_about_xyzpedia_echo"); break;
+			}
+			echo $wx->responseMsg($fromUsername, $toUsername, NULL, time(), $msg);			
 		}
 	}
 
 	private function _isSignUpMsg($msg) {
 		$arr = preg_split("/[\s,.，+]+/", $msg);
 		$regex = "/13[0-9]{9}|15[0|1|2|3|5|6|7|8|9]\d{8}|18[0|5|6|7|8|9]\d{8}/";
+		$matches = array();
 		foreach($arr as $key) {
-			if (preg_match($regex, $key)) {
+			if (preg_match($regex, $key, $matches) && $matches[0] == $key) {
 				return true;
 			}
 		}

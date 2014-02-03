@@ -110,8 +110,13 @@ class SettingController extends Controller {
 		$this->pageTitle .= "微信管理";
 		$this->render("/admin/setting/weixin", array(
 			"action" => "Weixinsetting",
+			"party_echo_on"        => get_option("weixin_party_echo_on"),
+			"party_echo"           => get_option("weixin_party_echo"),
 			"party_signup_echo_on" => get_option("weixin_party_signup_echo_on"),
 			"party_signup_echo"    => get_option("weixin_party_signup_echo"),
+			"keyword_search_echo"  => get_option("weixin_keyword_search_echo"),
+			"howto_contribute_echo"=> get_option("weixin_howto_contribute_echo"),
+			"about_xyzpedia_echo"  => get_option("weixin_about_xyzpedia_echo"),
 		));
 	}
 
@@ -120,8 +125,13 @@ class SettingController extends Controller {
 		if (empty($_POST)){
 			throwException(500, "没有Post数据");
 		}
+		set_option("weixin_party_echo_on",        $_POST["party_echo_on"]);
+		set_option("weixin_party_echo",           $_POST["party_echo"]);
 		set_option("weixin_party_signup_echo_on", $_POST["party_signup_echo_on"]);
 		set_option("weixin_party_signup_echo",    $_POST["party_signup_echo"]);
+		set_option("weixin_keyword_search_echo",  $_POST["keyword_search_echo"]);
+		set_option("weixin_howto_contribute_echo",$_POST["howto_contribute_echo"]);
+		set_option("weixin_about_xyzpedia_echo",  $_POST["about_xyzpedia_echo"]);
 		$this->redirect("/admin/setting/weixin?msg=131");
 	}
 

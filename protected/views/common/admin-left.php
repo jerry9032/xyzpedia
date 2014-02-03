@@ -70,8 +70,8 @@ function addDevider() {
 		$can_basic = can("setting", "basic");
 		$can_reading = can("setting", "reading");
 		$can_widget = can("setting", "widget");
-		$can_weixin = can("setting", "weixin");
-		addMenu("sitemanage", $can_basic || $can_reading || $can_widget);
+		$can_weixin = can("setting", "weixinsetting");
+		addMenu("sitemanage", $can_basic || $can_reading || $can_widget || $can_weixin);
 		addSubMenu("general", $can_basic, "/admin/setting/general", "cog");
 		//addSubMenu("reading", "阅读", $can_reading, "/admin/setting/reading", "zoom-in");
 		addSubMenu("widget", $can_widget, "/admin/setting/widget", "th-large");
